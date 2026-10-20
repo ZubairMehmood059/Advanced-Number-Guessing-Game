@@ -6,7 +6,7 @@ public class NumberGuessGame {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         boolean playAgain = true;
-        System.out.println("=== Welcome to Advanced Number Guessing Game ===");
+        System.out.println("=== Welcome to Advanced Number Guessing Game of Java ===");
         while (playAgain) {
             System.out.println("\nSelect Difficulty Level:");
             System.out.println("1. Easy (1 to 10)");
@@ -21,6 +21,7 @@ public class NumberGuessGame {
                 maxRange = 100;
             }
             int secretNumber = random.nextInt(maxRange) + 1;
+            //System.out.println("Secret Number: " + secretNumber);
             int attempts = 0;
             boolean hasGuessedCorrectly = false;
             System.out.println("I have picked a number between 1 and " + maxRange + ". Try to guess it!");
@@ -41,7 +42,7 @@ public class NumberGuessGame {
             String response = scanner.next();
             if (!response.equalsIgnoreCase("yes")) {
                 playAgain = false;
-                System.out.println("Thanks for playing!");
+                System.out.println("Thanks buddy for playing!");
             }
         }
         scanner.close();
